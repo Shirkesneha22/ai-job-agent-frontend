@@ -30,7 +30,7 @@ const Home = ({ activeTab }) => {
       setJobs(data);
       setError(null);
     } catch (err) {
-      setError('Could not connect to backend. Please make sure the FastAPI server is running.');
+      setError('Could not connect to backend. If the backend is hosted on Render, it may take 50 seconds to spin up from a cold start. Please wait and try again.');
       console.error(err);
     } finally {
       setLoading(false);
